@@ -1,0 +1,55 @@
+<p align="center">
+  <img src="asset/alch3my_banner.jpg" alt="ALCH3MYOS Banner" width="100%">
+</p>
+
+<br>
+
+# Google Pixel Tensor Focused
+
+# Initialize local repository
+```
+repo init -u https://github.com/Alch3myOS/android -b 16 --git-lfs
+```
+
+# Sync up
+```
+repo sync -c --force-sync -j$(nproc --all)
+```
+
+# Build
+
+- Set up the build environment
+```bash
+. b*/env*
+```
+
+- Lunch a target
+```bash
+lunch lineage_codename-bp4a-user
+```
+
+- To ensure changes take
+```bash
+m installclean
+```
+
+- To start compiling
+```bash
+m bacon
+```
+
+- Maintainer prop (define in system/product prop)
+```prop
+ro.alch3my.maintainer=Libra420T
+```
+
+- About phone - Create an rro-overlay for device info  
+```prop
+https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_packages/Alch3mySettingsHusky
+```
+
+- For GMS
+```make
+WITH_GMS := true
+WITH_GAPPS := true
+```

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote
+		name="alch3my"
+        fetch="https://github.com/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/16" />
+
+	<!-- Alch3my Additions -->
+
+	<!-- Alch3my Manifest -->
+	<project path="android" name="Alch3myOS/android" remote="alch3my" />
+
+	<!-- Build -->
+	<project path="build/make" name="Alch3myOS/build_make" groups="pdk,sysui-studio" remote="alch3my" >
+    	<linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    	<linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    	<linkfile src="core" dest="build/core" />
+    	<linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    	<linkfile src="target" dest="build/target" />
+    	<linkfile src="tools" dest="build/tools" />
+    </project>
+
+	<!-- Soong -->
+	<project path="build/soong" name="Alch3myOS/build_soong" groups="pdk,tradefed,sysui-studio" remote="alch3my" >
+    	<linkfile src="root.bp" dest="Android.bp" />
+    	<linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+
+	<!-- Recovery -->
+	<project path="bootable/recovery" name="Alch3myOS/bootable_recovery" groups="pdk" remote="alch3my" />
+
+	<!-- Sepolicy -->
+	<project path="device/lineage/sepolicy" name="Alch3myOS/device_lineage_sepolicy" remote="alch3my" />
+
+	<!-- Packages -->
+	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my" />
+	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="alch3my" />
+	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="alch3my" />
+	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="alch3my" />
+	<project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="alch3my" />
+
+	<!-- System -->
+	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="alch3my" />
+
+	<!-- Vendor -->
+	<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="alch3my" />
+	<project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="alch3my" />
+	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="alch3my" />
+	<project path="vendor/lineage" name="Alch3myOS/vendor_alch3my" remote="alch3my" />
+	<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="alch3my" />	
+
+</manifest>
