@@ -51,5 +51,4 @@ https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_
 - For GMS
 ```make
 WITH_GMS := true
-WITH_GAPPS := true
 ```
