@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote
+        name="gh"
+        fetch="https://github.com/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/17" />
+
+    <remote
+        name="gl"
+        fetch="https://gitlab.com/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/17" />
+
+    <remote
+        name="ge"
+        fetch="https://gitea.com/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/17" />
+
+        <!-- Alch3my Manifest -->
+        <project path="android" name="Alch3myOS/android" remote="gh" />
+
+        <!-- ART / Bionic / Libcore -->
+        <project path="art" name="Alch3myOS/art" groups="pdk" remote="gh" />
+        <project path="bionic" name="Alch3myOS/bionic" groups="pdk" remote="gh" />
+        <project path="libcore" name="Alch3myOS/libcore" groups="pdk,sysui-studio" remote="gh" />
+
+        <!-- Build -->
+        <project path="build/make" name="Alch3myOS/build_make" groups="pdk,sysui-studio" remote="gh" >
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+
+        <!-- Release configs -->
+        <project path="build/release" name="Alch3myOS/build_release" groups="pdk,tradefed,sysui-studio" remote="gh" />
+
+        <!-- Soong -->
+        <project path="build/soong" name="Alch3myOS/build_soong" groups="pdk,tradefed,sysui-studio" remote="gh" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+
+        <!-- External -->
+        <project path="external/bouncycastle" name="Alch3myOS/external_bouncycastle" groups="pdk" remote="gh" />
+        <project path="external/FadingEdgeLayout" name="Alch3myOS/external_FadingEdgeLayout" remote="gh" />
+
+        <!-- Recovery -->
+        <project path="bootable/recovery" name="Alch3myOS/bootable_recovery" groups="pdk" remote="gh" />
+
+        <!-- Sepolicy -->
+        <project path="device/lineage/sepolicy" name="Alch3myOS/device_lineage_sepolicy" remote="gh" />
+
+        <!-- Frameworks -->
+        <project path="frameworks/base" name="Alch3myOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="ge" clone-depth="1" />
+        <project path="frameworks/native" name="Alch3myOS/frameworks_native" groups="pdk" remote="gh" />
+        <project path="frameworks/av" name="Alch3myOS/frameworks_av" groups="pdk,sysui-studio" remote="gh" />
+        <project path="frameworks/libs/systemui" name="Alch3myOS/frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gh" />
+        <project path="frameworks/opt/net/wifi" name="Alch3myOS/frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="gh" />
+        <project path="frameworks/opt/telephony" name="Alch3myOS/frameworks_opt_telephony" groups="pdk,sysui-studio" remote="gh" />
+
+        <!-- Hardware -->
+        <project path="hardware/interfaces" name="Alch3myOS/hardware_interfaces" groups="pdk,sysui-studio" remote="gh" />
+
+        <!-- Kernel -->
+        <project path="kernel/configs" name="Alch3myOS/kernel_configs" groups="vts,pdk" remote="gh" />
+
+        <!-- SDKs -->
+        <project path="lineage-sdk" name="Alch3myOS/lineage-sdk" remote="gh" />
+        <project path="axion-sdk" name="Alch3myOS/axion-sdk" remote="gh" />
+
+        <!-- Packages -->
+        <project path="packages/apps/ArcaniumUI" name="Alch3myOS/packages_apps_ArcaniumUI" remote="ge" />
+        <project path="packages/apps/AppLocker" name="Alch3myOS/packages_apps_AppLocker" remote="gh" />
+        <project path="packages/apps/ThemeStore" name="Alch3myOS/packages_apps_ThemeStore" remote="gh" />
+        <project path="packages/apps/ColumbusService" name="Alch3myOS/packages_apps_ColumbusService" remote="gh" />
+        <project path="packages/apps/FaceUnlock" name="Alch3myOS/packages_apps_FaceUnlock" remote="gh" />
+        <project path="packages/apps/GameSpace" name="Alch3myOS/packages_apps_GameSpace" remote="gh" />
+        <project path="packages/apps/LMOFreeform" name="Alch3myOS/packages_apps_LMOFreeform" remote="gh" />
+        <project path="packages/apps/OmniStyle" name="Alch3myOS/packages_apps_OmniStyle" remote="gh" />
+        <project path="packages/apps/Sandbox" name="Alch3myOS/packages_apps_Sandbox" remote="gh" />
+        <project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="gh" />
+        <project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="gh" />
+        <project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="ge" />
+        <project path="packages/apps/SetupWizard" name="Alch3myOS/packages_apps_SetupWizard" remote="gh" />
+        <project path="packages/apps/SystemUIClocks" name="Alch3myOS/packages_apps_SystemUIClocks" remote="gh" />
+        <project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="gh" />
+
+        <!-- Modules -->
+        <project path="packages/modules/Bluetooth" name="Alch3myOS/packages_modules_Bluetooth" groups="pdk" remote="gh" />
+
+        <!-- Resources -->
+        <project path="packages/resources/apps" name="Alch3myOS/packages_resources_apps" remote="gh" />
+
+        <!-- Services -->
+        <project path="packages/services/AxQuickLook" name="Alch3myOS/packages_services_AxQuickLook" remote="gh" />
+        <project path="packages/services/OmniJaws" name="Alch3myOS/packages_services_OmniJaws" remote="gh" />
+        <project path="packages/services/Telecomm" name="Alch3myOS/packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="gh" />
+        <project path="packages/services/Telephony" name="Alch3myOS/packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="gh" />
+
+        <!-- System -->
+        <project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="gh" />
+
+        <!-- Vendor -->
+        <project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="gh" />
+        <project path="vendor/unbundled_google/packages/SettingsGoogle" name="Alch3myOS/vendor_packages_SettingsGoogle" remote="gh" />
+        <project path="vendor/unbundled_google/packages/SystemUIGoogle" name="Alch3myOS/vendor_packages_SystemUIGoogle" remote="gh" />
+        <!--<project path="vendor/google/CarrierSettings" name="Alch3myOS/vendor_google_CarrierSettings" remote="gh" />-->
+        <project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="gl" />
+        <project path="vendor/alch3my" name="Alch3myOS/vendor_alch3my" remote="gh" />
+        <!--<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="ge" />-->
+        <project path="vendor/themes" name="Alch3myOS/android_vendor_themes" remote="gh" />
+        <project path="vendor/OTA" name="Alch3myOS/OTA" remote="gh" />
+
+</manifest>
