@@ -1,36 +1,128 @@
-LineageOS
-===========
+<p align="center">
+  <img src="asset/alch3my_banner.jpg" alt="ALCH3MYOS Banner" width="100%">
+</p>
 
-Getting started
----------------
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-16-green.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Focus-Google_Tensor-blue.svg?style=for-the-badge">
+</p>
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+### 🧪 ABOUT ALCH3MYOS
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+Alch3myOS is an Android Custom ROM meticulously optimized and focused exclusively on Google Pixel Tensor devices. Our goal is to provide a seamless, high-performance experience with carefully curated enhancements.
+
+### 📦 SOURCE CODE & DEVICE TREES
+
+Alch3myOS is proudly open-source. All of our device-specific configurations, hardware wrappers, and kernels for the Google Tensor lineup are available on our GitHub organization.
+
+* **Device Repositories:** [Alch3myOS-Devices](https://github.com/orgs/Alch3myOS-Devices/repositories)
+
+---
+
+### 🛠️ GETTING STARTED
+
+### Prerequisites
+* Git LFS installed globally (`git lfs install`).
+
+### Initialize the Repository
+Create a new working directory for your build, navigate to it, and initialize the Alch3myOS manifest:
+```bash
+repo init -u https://github.com/Alch3myOS/android -b 17 --git-lfs
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+
+### Sync the Source
+```bash
+repo sync -c --force-sync -j$(nproc --all)
 ```
-Then to sync up:
+
+
+### 🚀 COMPILING THE ROM
+
+- Set up the build environment
+```bash
+. b*/env*
 ```
-repo sync
+
+- Lunch your target device (replace codename with your device, e.g., husky or komodo):
+```bash
+lunch lineage_codename-bp4a-user
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
+
+- Ensure a ensure recent changes build:
+```bash
+m installclean
+```
+
+- Start the compilation:
+```bash
+m bacon
+```
+
+### ⚙️ MAINTAINER CUSTOMIZATIONS
+
+If you are setting up a new device tree for Alch3myOS, ensure the following flags and properties are set in your device's configuration files.
+
+#### 1. Maintainer Info
+
+Define the maintainer name & url so it reflects correctly in the OS. Add this to your device_name/product.prop
+```prop
+ro.alch3my.maintainer=Libra420T
+```
+```prop
+ro.alch3my.maintainer.url=https://t.me/LibraAlch3my
+```
+
+#### 2. Device Info Overlay
+
+To ensure the "About Phone" settings display the correct device aesthetics, create an RRO-overlay. Adapt the structure found in our reference repositories:
+
+> **Reference:** [Alch3mySettingsHusky Overlay](https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_packages/Alch3mySettingsHusky)
+
+#### 3. Google Services (GMS)
+
+Let's be real: you bought a Pixel. It is literally a Google phone. We're going to safely assume you actually want Google apps on it. Unless you are trying to win some kind of irony award by aggressively de-Googling a Tensor device.
+
+---
+
+### 🤝 CREDITS & ACKNOWLEDGEMENTS
+
+Alch3myOS doesn't exist in a vacuum. We stand on the shoulders of open-source giants (and respectfully borrow their code). A massive thank you to the developers and communities that make this project possible:
+
+* **[LineageOS](https://github.com/LineageOS)** - For the endless hardware support, device trees, and legacy code we all rely on.
+* **[crDroid](https://github.com/crdroidandroid)** - For always raising the ceiling.
+* **[Axion AOSP](https://github.com/AxionAOSP)** - For providing us with innovation. 
+* **[AOSP](https://android.googlesource.com/)** - Google, for actually making Android open-source in the first place.
+* Every single maintainer, tester, and late-night coder who has ever pushed a commit to the Android open-source tree.
 
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+### 💬 REACH US
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+Join the Alch3myOS community on Telegram! Whether you need support, want to track our latest updates, or just want to hang out with other Pixel enthusiasts, here is where you can find us:
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+**Global Alch3myOS Links**
+* **Official Channel:** [Alch3myOS Updates](https://t.me/Alch3myOS)
+* **General Discussion:** [Alch3myOS Discussion](https://t.me/Alch3myDiscussion)
 
+**Device Specific Support Groups**
+* **Pixel 6 Series:** *[SOON]*
+* **Pixel 7 Series:** *[SOON]*
+* **Pixel 8 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
+* **Pixel 9 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
+* **Pixel 10 Series:** *[SOON]*
 
-Buildbot
---------
+---
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+### 🏁 FINAL WORDS
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
+Building and maintaining a custom ROM is a labor of love, endless hours of compiling, and occasionally fighting with SELinux denials at 3 AM. Alch3myOS is built by Pixel enthusiasts, for Pixel enthusiasts, with the singular goal of pushing Google's Tensor hardware to its absolute limit. 
 
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+Whether you are a maintainer submitting your first device tree, a tester hunting down bugs, or just someone looking for a cleaner, faster Android experience—welcome to the project. 
+
+Grab your platform tools, unlock that bootloader, and happy flashing! 🚀
+
+---
+<p align="center">
+  <a href="https://keepandroidopen.org">
+    <img src="https://img.shields.io/badge/Android_will_become_a_locked--down_platform_in-September_2026-red?style=flat-square&logo=android&logoColor=red" alt="Keep Android Open Countdown">
+  </a>
+</p>
