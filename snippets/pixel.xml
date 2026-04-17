@@ -9,8 +9,8 @@
         revision="refs/heads/16" />
 
 	<!-- Kernels -->
-	<project path="device/google/shusky-kernels/6.1" name="Alch3myOS-Devices/device_google_shusky-kernels"  remote="alch3my" />
-	<project path="device/google/akita-kernels/6.1" name="Alch3myOS-Devices/device_google_akita-kernels"  remote="alch3my" />
+	<project path="device/google/shusky-kernels" name="Alch3myOS-Devices/device_google_shusky-kernels"  remote="alch3my" />
+	<project path="device/google/akita-kernels" name="Alch3myOS-Devices/device_google_akita-kernels"  remote="alch3my" />
 	<!--
 	<project path="device/google/caimito-kernels/6.1" name="Alch3myOS-Devices/device_google_caimito-kernels"  remote="alch3my" />
 	<project path="device/google/tegu-kernels/6.1" name="Alch3myOS-Devices/device_google_tegu-kernels"  remote="alch3my" />
@@ -21,9 +21,11 @@
 	<project path="device/google/gs-common" name="Alch3myOS-Devices/device_google_gs-common"  remote="alch3my" />
 
 	<!-- 8 Series -->
+	<!-- Device -->
 	<project path="device/google/zuma" name="Alch3myOS-Devices/device_google_zuma"  remote="alch3my" />
 	<project path="device/google/shusky" name="Alch3myOS-Devices/device_google_shusky"  remote="alch3my" />
 	<project path="device/google/akita" name="Alch3myOS-Devices/device_google_akita"  remote="alch3my" />
+	<!-- Vendor -->
 	<project path="vendor/google/husky" name="Alch3myOS-Devices/vendor_google_husky"  remote="alch3my" />
 	<project path="vendor/google/shiba" name="Alch3myOS-Devices/vendor_google_shiba"  remote="alch3my" />
 	<project path="vendor/google/akita" name="Alch3myOS-Devices/vendor_google_akita"  remote="alch3my" />
