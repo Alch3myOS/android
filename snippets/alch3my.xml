@@ -34,6 +34,9 @@
 
 	<!-- Sepolicy -->
 	<project path="device/lineage/sepolicy" name="Alch3myOS/device_lineage_sepolicy" remote="alch3my" />
+	
+	<!-- Frameworks -->
+	<project path="frameworks/base" name="Alch3myOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="alch3my" />
 
 	<!-- Packages -->
 	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my" />
