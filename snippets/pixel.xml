@@ -15,33 +15,44 @@
         sync-j="4"
         revision="refs/heads/16-qpr2" />
 
+  <remote
+		name="muppets"
+        fetch="https://github.org/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/lineage-23.2" />
+
 	<!-- Kernels -->
 	<project path="device/google/shusky-kernels" name="Alch3myOS-Devices/device_google_shusky-kernels"  remote="alch3my" />
 	<project path="device/google/akita-kernels" name="Alch3myOS-Devices/device_google_akita-kernels"  remote="alch3my" />
+	
 	<project path="device/google/caimito-kernels" name="Pyrtle93/device_google_caimito-kernels"  remote="pyrtle93" />
 	<project path="device/google/tegu-kernels" name="Pyrtle93/device_google_tegu-kernels"  remote="pyrtle93" />
 
 	<!-- Common -->
 	<project path="device/google/gs-common" name="Alch3myOS-Devices/device_google_gs-common"  remote="alch3my" />
 
-	<!-- 8 Series -->
+	<!-- 8 Series -->	
 	<!-- Device -->
 	<project path="device/google/zuma" name="Alch3myOS-Devices/device_google_zuma"  remote="alch3my" />
 	<project path="device/google/shusky" name="Alch3myOS-Devices/device_google_shusky"  remote="alch3my" />
 	<project path="device/google/akita" name="Alch3myOS-Devices/device_google_akita"  remote="alch3my" />
-	<!-- Vendor -->
-	<project path="vendor/google/husky" name="Alch3myOS-Devices/vendor_google_husky"  remote="alch3my" />
-	<project path="vendor/google/shiba" name="Alch3myOS-Devices/vendor_google_shiba"  remote="alch3my" />
-	<project path="vendor/google/akita" name="Alch3myOS-Devices/vendor_google_akita"  remote="alch3my" />
 	
-
-	<!-- 9 Series
+	<!-- Vendor -->
+	<project path="vendor/google/husky" name="TheMuppets/proprietary_vendor_google_husky"  remote="muppets" />
+	<project path="vendor/google/shiba" name="TheMuppets/proprietary_vendor_google_shiba"  remote="muppets" />
+	<project path="vendor/google/akita" name="TheMuppets/proprietary_vendor_google_akita"  remote="muppets" />
+	
+	<!-- 9 Series -->
+	<!-- Device -->
 	<project path="device/google/zumapro" name="Alch3myOS-Devices/device_google_zumapro"  remote="alch3my" />
 	<project path="device/google/caimito" name="Alch3myOS-Devices/device_google_caimito"  remote="alch3my" />
 	<project path="device/google/tegu" name="Alch3myOS-Devices/device_google_tegu"  remote="alch3my" />
-	<project path="vendor/google/komodo" name="Alch3myOS-Devices/vendor_google_komodo"  remote="alch3my" />
-	<project path="vendor/google/caiman" name="Alch3myOS-Devices/vendor_google_caiman"  remote="alch3my" />
-	<project path="vendor/google/tokay" name="Alch3myOS-Devices/vendor_google_tokay"  remote="alch3my" />
-	<project path="vendor/google/tegu" name="Alch3myOS-Devices/vendor_google_tegu"  remote="alch3my" /> -->
+
+	<!--Vendor -->
+	<project path="vendor/google/komodo" name="TheMuppets/proprietary_vendor_google_komodo"  remote="muppets" />
+	<project path="vendor/google/caiman" name="TheMuppets/proprietary_vendor_google_caiman"  remote="muppets" />
+	<project path="vendor/google/tokay" name="TheMuppets/proprietary_vendor_google_tokay"  remote="muppets" />
+	<project path="vendor/google/tegu" name="TheMuppets/proprietary_vendor_google_tegu"  remote="muppets" />
 
 </manifest>
