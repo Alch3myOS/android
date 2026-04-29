@@ -59,7 +59,7 @@
 
   <project path="hardware/interfaces" name="Lunaris-AOSP/hardware_interfaces" groups="pdk,sysui-studio" remote="lunaris" />
 
-  <project path="hardware/qcom-caf/sm8450/display" name="Pong-Development/hardware_qcom-caf_sm8450_display" groups="qcom" revision="16" />
+  <!--<project path="hardware/qcom-caf/sm8450/display" name="Pong-Development/hardware_qcom-caf_sm8450_display" groups="qcom" revision="16" />-->
 
   <project path="kernel/configs" name="Lunaris-AOSP/kernel_configs" groups="vts,pdk" remote="lunaris" />
 
