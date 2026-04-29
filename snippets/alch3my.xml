@@ -8,6 +8,20 @@
         sync-j="4"
         revision="refs/heads/16" />
 
+  <remote
+		name="libra"
+        fetch="https://gitlab.com/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/16" />
+
+  <remote
+		name="alch3my-cb"
+        fetch="https://codeberg.org/"
+        sync-c="true"
+        sync-j="4"
+        revision="refs/heads/16" />
+
 	<!-- Alch3my Additions -->
 
 	<!-- Alch3my Manifest -->
@@ -42,7 +56,7 @@
 	<project path="frameworks/base" name="Alch3myOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="alch3my" />
 
 	<!-- Packages -->
-	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my" />
+	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my-cb" />
 	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="alch3my" />
 	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="alch3my" />
 	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="alch3my" />
@@ -52,11 +66,11 @@
 	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="alch3my" />
 
 	<!-- Vendor -->
-	<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="alch3my" />
+	<project path="vendor/google/camera" name="Libra420T/vendor_google_camera" remote="libra" />
 	<project path="vendor/google/CarrierSettings" name="Alch3myOS/vendor_google_CarrierSettings" remote="alch3my" />
 	<project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="alch3my" />
-	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="alch3my" />
+	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="alch3my-cb" />
 	<project path="vendor/lineage" name="Alch3myOS/vendor_alch3my" remote="alch3my" />
-	<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="alch3my" />	
+	<project path="vendor/gms" name="Libra420T/vendor_gms" remote="libra" />	
 
 </manifest>
