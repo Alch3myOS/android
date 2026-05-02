@@ -2,53 +2,122 @@
   <img src="asset/alch3my_banner.jpg" alt="ALCH3MYOS Banner" width="100%">
 </p>
 
-<br>
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-16-green.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Focus-Google_Tensor-blue.svg?style=for-the-badge">
+</p>
 
-# Google Pixel Tensor Focused
+### 🧪 ABOUT ALCH3MYOS
 
-# Initialize local repository
-```
+Alch3myOS is an Android Custom ROM meticulously optimized and focused exclusively on Google Pixel Tensor devices. Our goal is to provide a seamless, high-performance experience with carefully curated enhancements.
+
+### 📦 SOURCE CODE & DEVICE TREES
+
+Alch3myOS is proudly open-source. All of our device-specific configurations, hardware wrappers, and kernels for the Google Tensor lineup are available on our GitHub organization.
+
+* **Device Repositories:** [Alch3myOS-Devices](https://github.com/orgs/Alch3myOS-Devices/repositories)
+
+---
+
+### 🛠️ GETTING STARTED
+
+### Prerequisites
+Before you begin building Alch3myOS, ensure you have a standard Linux build environment (Ubuntu, Pop!_OS, or Arch) properly configured with the necessary dependencies. You will need:
+* At least **300GB** of free drive space.
+* At least **32GB** of RAM (64GB+ recommended or heavily backed by swap).
+* Git LFS installed globally (`git lfs install`).
+
+### Initialize the Repository
+Create a new working directory for your build, navigate to it, and initialize the Alch3myOS manifest:
+```bash
 repo init -u https://github.com/Alch3myOS/android -b 16 --git-lfs
 ```
 
-# Sync up
-```
+### Sync the Source
+```bash
 repo sync -c --force-sync -j$(nproc --all)
 ```
 
-# Build
+
+### 🚀 COMPILING THE ROM
 
 - Set up the build environment
 ```bash
 . b*/env*
 ```
 
-- Lunch a target
+- Lunch your target device (replace codename with your device, e.g., husky or komodo):
 ```bash
 lunch lineage_codename-bp4a-user
 ```
 
-- To ensure changes take
+- Ensure a ensure recent changes build:
 ```bash
 m installclean
 ```
 
-- To start compiling
+- Start the compilation:
 ```bash
 m bacon
 ```
 
-- Maintainer prop (define in system/product prop)
+### ⚙️ MAINTAINER CUSTOMIZATIONS
+
+If you are setting up a new device tree for Alch3myOS, ensure the following flags and properties are set in your device's configuration files.
+
+#### 1. Maintainer Info
+
+Define the maintainer name so it reflects correctly in the OS. Add this to your device_name/product.prop
 ```prop
 ro.alch3my.maintainer=Libra420T
 ```
 
-- About phone - Create an rro-overlay for device info  
-```prop
-https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_packages/Alch3mySettingsHusky
-```
+#### 2. Device Info Overlay
 
-- For GMS
-```make
+To ensure the "About Phone" settings display the correct device aesthetics, create an RRO-overlay. Adapt the structure found in our reference repositories:
+
+> **Reference:** [Alch3mySettingsHusky Overlay](https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_packages/Alch3mySettingsHusky)
+
+#### 3. Google Services (GMS)
+
+Let's be real: you bought a Pixel. It is literally a Google phone. We're going to safely assume you actually want Google apps on it. Unless you are trying to win some kind of irony award by aggressively de-Googling a Tensor device, keep this variable enabled in your environment or device tree:
+```makefile
 WITH_GMS := true
 ```
+
+
+### 🤝 CREDITS & ACKNOWLEDGEMENTS
+
+Alch3myOS doesn't exist in a vacuum. We stand on the shoulders of open-source giants (and respectfully borrow their code). A massive thank you to the developers and communities that make this project possible:
+
+* **[Lunaris-AOSP](https://github.com/Lunaris-AOSP)** - The core foundation and upstream base for Alch3myOS. 
+* **[LineageOS](https://github.com/LineageOS)** - For the endless hardware support, device trees, and legacy code we all rely on.
+* **[AOSP](https://android.googlesource.com/)** - Google, for actually making Android open-source in the first place.
+* Every single maintainer, tester, and late-night coder who has ever pushed a commit to the Android open-source tree.
+
+
+### 💬 REACH US
+
+Join the Alch3myOS community on Telegram! Whether you need support, want to track our latest updates, or just want to hang out with other Pixel enthusiasts, here is where you can find us:
+
+**Global Alch3myOS Links**
+* **Official Channel:** [Alch3myOS Updates](https://t.me/Alch3myOS)
+* **General Discussion:** [Alch3myOS Discussion](https://t.me/Alch3myDiscussion)
+
+**Device Specific Support Groups**
+* **Pixel 6 Series:** *[SOON]*
+* **Pixel 7 Series:** *[SOON]*
+* **Pixel 8 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
+* **Pixel 9 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
+* **Pixel 10 Series:** *[SOON]*
+
+---
+
+### 🏁 FINAL WORDS
+
+Building and maintaining a custom ROM is a labor of love, endless hours of compiling, and occasionally fighting with SELinux denials at 3 AM. Alch3myOS is built by Pixel enthusiasts, for Pixel enthusiasts, with the singular goal of pushing Google's Tensor hardware to its absolute limit. 
+
+Whether you are a maintainer submitting your first device tree, a tester hunting down bugs, or just someone looking for a cleaner, faster Android experience—welcome to the project. 
+
+Grab your platform tools, unlock that bootloader, and happy flashing! 🚀
