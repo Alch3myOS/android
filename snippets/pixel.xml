@@ -16,25 +16,20 @@
         revision="refs/heads/lineage-23.2" />
 
   <remote
-		name="9s-kernel"
+		name="pyrtle93"
         fetch="https://codeberg.org/"
         sync-c="true"
         sync-j="4"
         revision="refs/heads/16-qpr2" />
 
-  <remote
-		name="pyrtle93"
-        fetch="https://codeberg.org/"
-        sync-c="true"
-        sync-j="4"
-        revision="refs/heads/lunaris" />
-
 	<!-- Kernels -->
 	<project path="device/google/shusky-kernels" name="Alch3myOS-Devices/device_google_shusky-kernels"  remote="alch3my" />
 	<project path="device/google/akita-kernels" name="Alch3myOS-Devices/device_google_akita-kernels"  remote="alch3my" />
 	
-	<project path="device/google/caimito-kernels" name="Pyrtle93/device_google_caimito-kernels"  remote="9s-kernel" />
-	<project path="device/google/tegu-kernels" name="Pyrtle93/device_google_tegu-kernels"  remote="9s-kernel" />
+	<project path="device/google/caimito-kernels" name="Pyrtle93/device_google_caimito-kernels"  remote="pyrtle93" />
+	<project path="device/google/tegu-kernels" name="Pyrtle93/device_google_tegu-kernels"  remote="pyrtle93" />
+	
+	<project path="device/google/muzel-kernels" name="Alch3myOS-Devices/device_google_muzel-kernels"  remote="alch3my" />
 
 	<!-- Common -->
 	<project path="device/google/gs-common" name="Alch3myOS-Devices/device_google_gs-common"  remote="alch3my" />
@@ -46,9 +41,9 @@
 	<project path="device/google/akita" name="Alch3myOS-Devices/device_google_akita"  remote="alch3my" />
 	
 	<!-- Vendor -->
-	<project path="vendor/google/husky" name="Alch3myOS-Devices/vendor_google_husky"  remote="los" />
-	<project path="vendor/google/shiba" name="Alch3myOS-Devices/vendor_google_shiba"  remote="los" />
-	<project path="vendor/google/akita" name="Alch3myOS-Devices/vendor_google_akita"  remote="los" />
+	<project path="vendor/google/husky" name="TheMuppets/proprietary_vendor_google_husky"  remote="los" />
+	<project path="vendor/google/shiba" name="TheMuppets/proprietary_vendor_google_shiba"  remote="los" />
+	<project path="vendor/google/akita" name="TheMuppets/proprietary_vendor_google_akita"  remote="los" />
 	
 	<!-- 9 Series -->
 	<!-- Device -->
@@ -57,9 +52,19 @@
 	<project path="device/google/tegu" name="Alch3myOS-Devices/device_google_tegu"  remote="alch3my" />
 
 	<!--Vendor -->
-	<project path="vendor/google/komodo" name="Pyrtle93/vendor_google_komodo"  remote="pyrtle93" />
-	<project path="vendor/google/caiman" name="Pyrtle93/vendor_google_caiman"  remote="pyrtle93" />
-	<project path="vendor/google/tokay" name="Pyrtle93/vendor_google_tokay"  remote="pyrtle93" />
-	<project path="vendor/google/tegu" name="Pyrtle93/vendor_google_tegu"  remote="pyrtle93" />
+	<project path="vendor/google/komodo" name="TheMuppets/proprietary_vendor_google_komodo"  remote="los" />
+	<project path="vendor/google/caiman" name="TheMuppets/proprietary_vendor_google_caiman"  remote="los" />
+	<project path="vendor/google/tokay" name="TheMuppets/proprietary_vendor_google_tokay"  remote="los" />
+	<project path="vendor/google/tegu" name="TheMuppets/proprietary_vendor_google_tegu"  remote="los" />
+	
+	<!-- 10 Series -->
+	<!-- Device -->
+	<project path="device/google/laguna" name="Alch3myOS-Devices/device_google_laguna"  remote="alch3my" />
+	<project path="device/google/muzel" name="Alch3myOS-Devices/device_google_muzel"  remote="alch3my" />
+	
+	<!-- Vendor -->
+	<project path="vendor/google/mustang" name="TheMuppets/proprietary_vendor_google_mustang"  remote="los" />
+	<project path="vendor/google/blazer" name="TheMuppets/proprietary_vendor_google_blazer"  remote="los" />
+	<project path="vendor/google/frankel" name="TheMuppets/proprietary_vendor_google_frankel"  remote="los" />
 
 </manifest>
