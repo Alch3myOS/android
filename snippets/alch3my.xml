@@ -27,8 +27,8 @@
 	<!-- Alch3my Manifest -->
 	<project path="android" name="Alch3myOS/android" remote="alch3my" />
 	
-	<!-- Axion-sdk -->
-	<project path="axion-sdk" name="Alch3myOS/axion-sdk" remote="alch3my" />
+	<!-- Axion-sdk 
+	<project path="axion-sdk" name="Alch3myOS/axion-sdk" remote="alch3my" />-->
 
 	<!-- Build -->
 	<project path="build/make" name="Alch3myOS/build_make" groups="pdk,sysui-studio" remote="alch3my" >

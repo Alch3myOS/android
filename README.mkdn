@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-16-green.svg?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=for-the-badge">
   <img src="https://img.shields.io/badge/Focus-Google_Tensor-blue.svg?style=for-the-badge">
 </p>
 
@@ -23,9 +22,6 @@ Alch3myOS is proudly open-source. All of our device-specific configurations, har
 ### 🛠️ GETTING STARTED
 
 ### Prerequisites
-Before you begin building Alch3myOS, ensure you have a standard Linux build environment (Ubuntu, Pop!_OS, or Arch) properly configured with the necessary dependencies. You will need:
-* At least **300GB** of free drive space.
-* At least **32GB** of RAM (64GB+ recommended or heavily backed by swap).
 * Git LFS installed globally (`git lfs install`).
 
 ### Initialize the Repository
@@ -68,9 +64,12 @@ If you are setting up a new device tree for Alch3myOS, ensure the following flag
 
 #### 1. Maintainer Info
 
-Define the maintainer name so it reflects correctly in the OS. Add this to your device_name/product.prop
+Define the maintainer name & url so it reflects correctly in the OS. Add this to your device_name/product.prop
 ```prop
 ro.alch3my.maintainer=Libra420T
+```
+```prop
+ro.alch3my.maintainer.url=https://t.me/LibraAlch3my
 ```
 
 #### 2. Device Info Overlay
@@ -81,11 +80,9 @@ To ensure the "About Phone" settings display the correct device aesthetics, crea
 
 #### 3. Google Services (GMS)
 
-Let's be real: you bought a Pixel. It is literally a Google phone. We're going to safely assume you actually want Google apps on it. Unless you are trying to win some kind of irony award by aggressively de-Googling a Tensor device, keep this variable enabled in your environment or device tree:
-```makefile
-WITH_GMS := true
-```
+Let's be real: you bought a Pixel. It is literally a Google phone. We're going to safely assume you actually want Google apps on it. Unless you are trying to win some kind of irony award by aggressively de-Googling a Tensor device.
 
+---
 
 ### 🤝 CREDITS & ACKNOWLEDGEMENTS
 
@@ -121,3 +118,10 @@ Building and maintaining a custom ROM is a labor of love, endless hours of compi
 Whether you are a maintainer submitting your first device tree, a tester hunting down bugs, or just someone looking for a cleaner, faster Android experience—welcome to the project. 
 
 Grab your platform tools, unlock that bootloader, and happy flashing! 🚀
+
+---
+<p align="center">
+  <a href="https://keepandroidopen.org">
+    <img src="https://img.shields.io/badge/Android_will_become_a_locked--down_platform_in-September_2026-red?style=flat-square&logo=android&logoColor=red" alt="Keep Android Open Countdown">
+  </a>
+</p>
