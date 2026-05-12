@@ -1031,7 +1031,6 @@
   </project>
 
   <include name="snippets/alch3my.xml" />
-  <include name="snippets/pixel.xml" />
   <include name="snippets/lunaris.xml" />
   <include name="snippets/lineage.xml" />
 </manifest>
