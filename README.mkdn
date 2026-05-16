@@ -89,6 +89,8 @@ Let's be real: you bought a Pixel. It is literally a Google phone. We're going t
 Alch3myOS doesn't exist in a vacuum. We stand on the shoulders of open-source giants (and respectfully borrow their code). A massive thank you to the developers and communities that make this project possible:
 
 * **[Lunaris-AOSP](https://github.com/Lunaris-AOSP)** - The core foundation and upstream base for Alch3myOS. 
+* **[crDroid](https://github.com/crdroidandroid)** - For always raising the ceiling.
+* **[Axion AOSP](https://github.com/AxionAOSP)** - For providing us with innovation. 
 * **[LineageOS](https://github.com/LineageOS)** - For the endless hardware support, device trees, and legacy code we all rely on.
 * **[AOSP](https://android.googlesource.com/)** - Google, for actually making Android open-source in the first place.
 * Every single maintainer, tester, and late-night coder who has ever pushed a commit to the Android open-source tree.

@@ -27,8 +27,18 @@
 	<!-- Alch3my Manifest -->
 	<project path="android" name="Alch3myOS/android" remote="alch3my" />
 	
-	<!-- Axion-sdk 
-	<project path="axion-sdk" name="Alch3myOS/axion-sdk" remote="alch3my" />-->
+	<project path="bionic" name="Alch3myOS/bionic" groups="pdk" remote="alch3my" />
+	
+	<!-- Lineage -->
+	<project path="lineage-sdk" name="Alch3myOS/lineage-sdk" remote="alch3my" />
+	
+	<!-- Axion -->
+	<project path="axion-sdk" name="Alch3myOS/axion-sdk" remote="alch3my" />
+	<project path="packages/apps/AppLocker" name="Alch3myOS/packages_apps_AppLocker" remote="alch3my" />
+	<project path="packages/apps/AxThemeStore" name="Alch3myOS/packages_apps_AxThemeStore" remote="alch3my" />
+	<project path="packages/services/AxQuickLook" name="Alch3myOS/packages_services_AxQuickLook" remote="alch3my" />
+	<project path="packages/apps/Sandbox" name="Alch3myOS/packages_apps_Sandbox" remote="alch3my" />
+	
 
 	<!-- Build -->
 	<project path="build/make" name="Alch3myOS/build_make" groups="pdk,sysui-studio" remote="alch3my" >
@@ -59,8 +69,10 @@
 	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my-cb" />
 	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="alch3my" />
 	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="alch3my" />
+	<project path="packages/apps/MatLog" name="Alch3myOS/packages_apps_MatLog" remote="alch3my" />
 	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="alch3my-cb" />
 	<project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="alch3my" />
+	<project path="packages/services/OmniJaws" name="Alch3myOS/packages_services_OmniJaws" remote="alch3my" />
 
 	<!-- System -->
 	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="alch3my" />
