@@ -59,6 +59,7 @@
 	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="alch3my-cb" />
 	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="alch3my" />
 	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="alch3my" />
+	<project path="packages/apps/MatLog" name="Alch3myOS/packages_apps_MatLog" remote="alch3my" />
 	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="alch3my-cb" />
 	<project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="alch3my" />
 
