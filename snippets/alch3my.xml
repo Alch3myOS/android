@@ -71,7 +71,7 @@
 	<project path="vendor/google/CarrierSettings" name="Alch3myOS/vendor_google_CarrierSettings" remote="alch3my" />
 	<project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="alch3my" />
 	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="alch3my-cb" />
-	<project path="vendor/lineage" name="Alch3myOS/vendor_alch3my" remote="alch3my" />
 	<project path="vendor/gms" name="Libra420T/vendor_gms" remote="libra" />	
+	<project path="vendor/alch3my" name="Alch3myOS/vendor_alch3my" remote="alch3my" />
 
 </manifest>
