@@ -15,6 +15,21 @@
         sync-j="4"
         revision="refs/heads/16" />
 
+  <!-- SSH -->
+  <remote
+	  name="gessh"
+	  fetch="ssh://git@gitea.com/"
+	  sync-c="true"
+	  sync-j="4"
+	  revision="refs/heads/16" />
+
+  <remote
+	  name="ge"
+	  fetch="https://gitea.com/"
+	  sync-c="true"
+	  sync-j="4"
+	  revision="refs/heads/16" />
+
 	<!-- Alch3my Additions -->
 
 	<!-- Alch3my Manifest -->
@@ -46,26 +61,26 @@
 	<project path="device/lineage/sepolicy" name="Alch3myOS/device_lineage_sepolicy" remote="gh" />
 	
 	<!-- Frameworks -->
-	<project path="frameworks/base" name="Alch3myOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gh" />
+	<project path="frameworks/base" name="Alch3myOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gessh" />
 	<project path="frameworks/native" name="Alch3myOS/frameworks_native" groups="pdk" remote="gl" />
 
 	<!-- Packages -->
-	<project path="packages/apps/Alch3myLabs" name="Alch3myOS/packages_apps_Alch3myLabs" remote="gl" />
+	<project path="packages/apps/Arcanium" name="Alch3myOS/packages_apps_Arcanium" remote="ge" />
 	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="gh" />
 	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="gh" />
 	<project path="packages/apps/MatLog" name="Alch3myOS/packages_apps_MatLog" remote="gh" />
-	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="gl" />
+	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="ge" />
 	<project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="gh" />
 
 	<!-- System -->
 	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="gh" />
 
 	<!-- Vendor -->
-	<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="gl" />
+	<!--<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="gl" />-->
 	<project path="vendor/google/CarrierSettings" name="Alch3myOS/vendor_google_CarrierSettings" remote="gh" />
 	<project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="gh" />
 	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="gl" />
-	<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="gl" />	
+	<!--<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="gl" />-->
 	<project path="vendor/lineage" name="Alch3myOS/vendor_lineage" remote="gh" />
 	<project path="vendor/OTA" name="Alch3myOS/OTA" remote="gh" />
 
