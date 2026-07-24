@@ -76,11 +76,11 @@
 	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="gh" />
 
 	<!-- Vendor -->
-	<!--<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="gl" />-->
+	<project path="vendor/google/camera" name="Alch3myOS/vendor_google_camera" remote="ge" />
 	<project path="vendor/google/CarrierSettings" name="Alch3myOS/vendor_google_CarrierSettings" remote="gh" />
 	<project path="vendor/google/faceunlock" name="Alch3myOS/vendor_google_faceunlock" remote="gh" />
 	<project path="vendor/extras" name="Alch3myOS/vendor_extras" remote="gl" />
-	<!--<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="gl" />-->
+	<project path="vendor/gms" name="Alch3myOS/vendor_gms" remote="ge" />
 	<project path="vendor/lineage" name="Alch3myOS/vendor_lineage" remote="gh" />
 	<project path="vendor/OTA" name="Alch3myOS/OTA" remote="gh" />
 
