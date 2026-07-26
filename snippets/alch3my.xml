@@ -65,7 +65,7 @@
 	<project path="frameworks/native" name="Alch3myOS/frameworks_native" groups="pdk" remote="gl" />
 
 	<!-- Packages -->
-	<project path="packages/apps/Arcanium" name="Alch3myOS/packages_apps_Arcanium" remote="ge" />
+	<project path="packages/apps/ArcaniumUI" name="Alch3myOS/packages_apps_ArcaniumUI" remote="ge" />
 	<project path="packages/apps/Launcher3" name="Alch3myOS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="gh" />
 	<project path="packages/apps/LineageParts" name="Alch3myOS/packages_apps_LineageParts" remote="gh" />
 	<project path="packages/apps/MatLog" name="Alch3myOS/packages_apps_MatLog" remote="gh" />
