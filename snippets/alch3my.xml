@@ -71,6 +71,7 @@
 	<project path="packages/apps/MatLog" name="Alch3myOS/packages_apps_MatLog" remote="gh" />
 	<project path="packages/apps/Settings" name="Alch3myOS/packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="ge" />
 	<project path="packages/apps/Updater" name="Alch3myOS/packages_apps_Updater" remote="gh" />
+	<project path="packages/services/Alch3myFX" name="Alch3myOS/packages_services_Alch3myFX" remote="gh"/>
 
 	<!-- System -->
 	<project path="system/core" name="Alch3myOS/system_core" groups="pdk" remote="gh" />
