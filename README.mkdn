@@ -3,17 +3,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Android-16-green.svg?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Focus-Google_Tensor-blue.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Android-17-green.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Focus-Performance_&_Customization-blue.svg?style=for-the-badge">
 </p>
 
 ### 🧪 ABOUT ALCH3MYOS
 
-Alch3myOS is an Android Custom ROM meticulously optimized and focused exclusively on Google Pixel Tensor devices. Our goal is to provide a seamless, high-performance experience with carefully curated enhancements.
+Alch3myOS is a meticulously crafted Android Custom ROM built to transcend hardware limitations & deliver a deeply optimized, high-performance experience across supported devices. We believe your smartphone should feel magical, which is why our ultimate goal is to provide a seamless, high-performance experience with carefully curated enhancements.
 
 ### 📦 SOURCE CODE & DEVICE TREES
 
-Alch3myOS is proudly open-source. All of our device-specific configurations, hardware wrappers, and kernels for the Google Tensor lineup are available on our GitHub organization.
+Alch3myOS is proudly open-source. All of our device-specific configurations, hardware wrappers, & kernels are available on our GitHub organization.
 
 * **Device Repositories:** [Alch3myOS-Devices](https://github.com/orgs/Alch3myOS-Devices/repositories)
 
@@ -48,7 +48,7 @@ repo sync -c --force-sync -j$(nproc --all)
 lunch lineage_codename-bp4a-user
 ```
 
-- Ensure a ensure recent changes build:
+- Ensure recent changes build:
 ```bash
 m installclean
 ```
@@ -80,8 +80,7 @@ To ensure the "About Phone" settings display the correct device aesthetics, crea
 
 #### 3. Google Services (GMS)
 
-Let's be real: you bought a Pixel. It is literally a Google phone. We're going to safely assume you actually want Google apps on it. Unless you are trying to win some kind of irony award by aggressively de-Googling a Tensor device.
-
+Let's be real: We know most users want Google apps on their daily driver. Unless you are trying to win some kind of irony award by aggressively de-Googling your device, GMS is included. (Sorry no Vanilla releases)
 ---
 
 ### 🤝 CREDITS & ACKNOWLEDGEMENTS
@@ -97,7 +96,7 @@ Alch3myOS doesn't exist in a vacuum. We stand on the shoulders of open-source gi
 
 ### 💬 REACH US
 
-Join the Alch3myOS community on Telegram! Whether you need support, want to track our latest updates, or just want to hang out with other Pixel enthusiasts, here is where you can find us:
+Join the Alch3myOS community on Telegram! Whether you need support, want to track our latest updates, or just want to hang out with other Custom ROM enthusiasts, here is where you can find us:
 
 **Global Alch3myOS Links**
 * **Official Channel:** [Alch3myOS Updates](https://t.me/Alch3myOS)
@@ -105,16 +104,17 @@ Join the Alch3myOS community on Telegram! Whether you need support, want to trac
 
 **Device Specific Support Groups**
 * **Pixel 6 Series:** *[SOON]*
-* **Pixel 7 Series:** *[SOON]*
+* **Pixel 7 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
 * **Pixel 8 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
 * **Pixel 9 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
-* **Pixel 10 Series:** *[SOON]*
+* **Pixel 10 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
+* **Pixel 11 Series:** *[SOON]*
 
 ---
 
 ### 🏁 FINAL WORDS
 
-Building and maintaining a custom ROM is a labor of love, endless hours of compiling, and occasionally fighting with SELinux denials at 3 AM. Alch3myOS is built by Pixel enthusiasts, for Pixel enthusiasts, with the singular goal of pushing Google's Tensor hardware to its absolute limit. 
+Building and maintaining a custom ROM is a labor of love, endless hours of compiling, and occasionally fighting with SELinux denials at 3 AM. Alch3myOS is built by Android enthusiasts, for Android enthusiasts, with the singular goal of pushing Android hardware to its absolute limit.
 
 Whether you are a maintainer submitting your first device tree, a tester hunting down bugs, or just someone looking for a cleaner, faster Android experience—welcome to the project. 
 
