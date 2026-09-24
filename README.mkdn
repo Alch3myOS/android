@@ -1,98 +1,179 @@
-# Initialize local repository
-```
-repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
+<p align="center">
+  <img src="asset/alch3my_banner.jpg" alt="ALCH3MYOS Banner" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-16-green.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Focus-Performance_&_Customization-blue.svg?style=for-the-badge">
+</p>
+
+### 🧪 ABOUT ALCH3MYOS
+
+Alch3myOS is a meticulously crafted Android Custom ROM built to transcend hardware limitations & deliver a deeply optimized, high-performance experience across supported devices. We believe your smartphone should feel magical, which is why our ultimate goal is to provide a seamless, high-performance experience with carefully curated enhancements.
+
+### 📦 SOURCE CODE & DEVICE TREES
+
+Alch3myOS is proudly open-source. All of our device-specific configurations, hardware wrappers, & kernels are available on our GitHub organization.
+
+* **Device Repositories:** [Alch3myOS-Devices](https://github.com/orgs/Alch3myOS-Devices/repositories)
+
+---
+
+### 🛠️ GETTING STARTED
+
+### Prerequisites
+* Git LFS installed globally (`git lfs install`).
+
+### Initialize the Repository
+Create a new working directory for your build, navigate to it, and initialize the Alch3myOS manifest:
+```bash
+repo init -u https://github.com/Alch3myOS/android -b 16n --git-lfs
 ```
 
-# Sync up
+### Sync the Source
+```bash
+repo sync -c --force-sync -j$(nproc --all)
 ```
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+---
+
+### ⚙️ MAINTAINER CUSTOMIZATIONS
+
+If you are setting up a new device tree for Alch3myOS, ensure the following flags and properties are set in your device's configuration files.
+
+#### 1. Maintainer Info
+
+Define the maintainer name & url so it reflects correctly in the OS. Add this to your device_name/product.prop
+```prop
+ro.alch3my.maintainer=Libra420T
+```
+```prop
+ro.alch3my.maintainer.url=https://t.me/LibraAlch3my
+```
+---
+
+#### 2. Device Info Overlay
+
+To ensure the "About Phone" settings display the correct device aesthetics, create an RRO-overlay. Adapt the structure found in our reference repositories:
+
+> **Reference:** [Alch3mySettingsHusky Overlay](https://github.com/Alch3myOS-Devices/device_google_shusky/tree/16/husky/overlay_packages/Alch3mySettingsHusky)
+---
+
+#### 3. Google Services (GMS)
+
+Let's be real: We know most users want Google apps on their daily driver. Unless you are trying to win some kind of irony award by aggressively de-Googling your device.
+Nevertheless, We offer the ability to build Vanilla anyway...
+Google Services (GMS) (Optional)
+```prop
+WITH_GMS := true
+```
+---
+
+#### 4. Rom/Device Flags
+
+Alch3myOS Maintainer
+```prop
+ALCH3MY_MAINTAINER := Libra420T
+```
+Alch3myOS Build Type (Unofficial by Default)
+```prop
+ALCH3MY_BUILD_TYPE := UNOFFICIAL
+```
+Is Device Google Pixel (Manditory For All Pixels)
+```prop
+IS_PIXEL := true
+```
+FaceUnlock & sFlinger (false for all Pixels)
+```prop
+TARGET_FACE_UNLOCK_SUPPORTED := true
+SURFACE_FLINGER_BOOST := true
+```
+Build as WebCam
+```prop
+TARGET_BUILD_DEVICE_AS_WEBCAM ?= false
+```
+UDPFS
+```prop
+TARGET_CUSTOM_UDFPS := true
+```
+Bypass Charging
+```prop
+BYPASS_CHARGE_SUPPORTED := true
+```
+Supports HBM
+```prop
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
+```
+Supports Advanced Engine Color
+```prop
+USE_REALITY_ENGINE := true
+USE_ADVANCED_DISPLAY_COLOR := true
 ```
 
-# Build
+---
+
+### 🚀 COMPILING THE ROM
 
 - Set up the build environment
 ```bash
 . b*/env*
 ```
 
-- Lunch a target
+- Lunch your target device (replace codename with your device, e.g., husky or komodo):
 ```bash
 lunch lineage_codename-bp4a-user
 ```
 
-- To start compiling
+- Ensure recent changes build:
+```bash
+m installclean
+```
+
+- Start the compilation:
 ```bash
 m bacon
 ```
 
-- Maintainer prop (define in system/product prop)
-```prop
-ro.lunaris.maintainer=GHOST | ゴースト
-```
+### 🤝 CREDITS & ACKNOWLEDGEMENTS
 
-- About phone 
-```prop
-https://github.com/Pong-Development/device_nothing_Pong/blob/luna/overlay/pong/NTSettingsResTarget/res/values/lunaris_strings.xml
-```
+Alch3myOS doesn't exist in a vacuum. We stand on the shoulders of open-source giants (and respectfully borrow their code). A massive thank you to the developers and communities that make this project possible:
 
-- If device support UDFPS
-```make
-TARGET_CUSTOM_UDFPS := true
-```
+* **[LineageOS](https://github.com/LineageOS)** - For the endless hardware support, device trees, and legacy code we all rely on.
+* **[crDroid](https://github.com/crdroidandroid)** - For always raising the ceiling.
+* **[Axion AOSP](https://github.com/AxionAOSP)** - For providing us with innovation. 
+* **[AOSP](https://android.googlesource.com/)** - Google, for actually making Android open-source in the first place.
+* Every single maintainer, tester, and late-night coder who has ever pushed a commit to the Android open-source tree.
 
-- For GMS
-```make
-WITH_GMS := true
-```
 
-- Use aosp telephony
-```make
-WITH_GMS_COMMS_SUITE := false
-```
+### 💬 REACH US
 
-- Disable pixel launcher
-```make
-WITH_PIXEL_LAUNCHER := false
-```
+Join the Alch3myOS community on Telegram! Whether you need support, want to track our latest updates, or just want to hang out with other Custom ROM enthusiasts, here is where you can find us:
 
-- Build google maps
-```make
-TARGET_USE_MAPS := true
-```
+**Global Alch3myOS Links**
+* **Official Channel:** [Alch3myOS Updates](https://t.me/Alch3myOS)
+* **General Discussion:** [Alch3myOS Discussion](https://t.me/Alch3myDiscussion)
 
-- Build google files
-```make
-TARGET_USE_FILES := true
-```
+**Device Specific Support Groups**
+* **Pixel 6 Series:** *[SOON]*
+* **Pixel 7 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
+* **Pixel 8 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
+* **Pixel 9 Series:** [Pyrtle's Pixels](https://t.me/PyrtlesPixels)
+* **Pixel 10 Series:** [Libra's Alch3my](https://t.me/LibraAlch3my)
+* **Pixel 11 Series:** *[SOON]*
 
-- Use aosp gallery
-```make
-TARGET_USE_GPHOTOS := false
-```
+---
 
-- Disable live wallpaper and other
-```make
-TARGET_USE_WALLPAPERS := false
-```
+### 🏁 FINAL WORDS
 
-- Use X reality engine (careful with mtk, causes display stuck issue)
-```make
-USE_REALITY_ENGINE := true
-```
+Building and maintaining a custom ROM is a labor of love, endless hours of compiling, and occasionally fighting with SELinux denials at 3 AM. Alch3myOS is built by Android enthusiasts, for Android enthusiasts, with the singular goal of pushing Android hardware to its absolute limit.
 
-- Set surfaceflinger refreshrate
-```make
-$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
-$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
-```
+Whether you are a maintainer submitting your first device tree, a tester hunting down bugs, or just someone looking for a cleaner, faster Android experience—welcome to the project. 
 
-- Surface flinger boosting (Smoother scrolling, fewer frame drops but Keeps CPU slightly “awake”)
-```make
-SURFACE_FLINGER_BOOST := true
-```
+Grab your platform tools, unlock that bootloader, and happy flashing! 🚀
 
-- Limit AOD refreshrate (SystemUI overlay)
-```make
-<!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
-<integer name="config_aodMaxRefreshRate">60</integer>
-```
+---
+<p align="center">
+  <a href="https://keepandroidopen.org">
+    <img src="https://img.shields.io/badge/Android_will_become_a_locked--down_platform_in-January_2027-red?style=flat-square&logo=android&logoColor=red" alt="Keep Android Open Countdown">
+  </a>
+</p>
